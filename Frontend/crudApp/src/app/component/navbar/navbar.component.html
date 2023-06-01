@@ -1,0 +1,68 @@
+<p>  
+  <mat-toolbar> 
+  <img src="../../../assets/yamahalogo.png" alt="yamaha"
+      class="yamaha-logo" />&nbsp;&nbsp;&nbsp;&nbsp;<span class="lds">LDS</span>
+      <span class="example-spacer"></span>    
+      <a mat-icon-button *ngIf="loggedIn" routerLink="/dashboard" class="dashboard">Dashboard</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-icon-button *ngIf="!loggedIn" routerLink="/login" class="login">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-icon-button *ngIf="loggedIn" (click)="logoutUser()" class="login">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <p class="small" *ngIf="loggedIn">[Pankaj Kumar] </p>&nbsp;&nbsp;
+      <p class="small" *ngIf="loggedIn">[{{ getDate() }}]</p>
+    </mat-toolbar>
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p>
+  <mat-toolbar class="nav" color="primary">
+   
+    <img src="../../assets/yamahalogo.png">
+   
+    <span class="heading-text">LDS</span>
+
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <a style="margin-left: 500px;" routerLink="/login" routerLinkActive="active" mat-icon-button class="nav-link" *ngIf="!loggedIn"><b>Login</b></a>
+    <span class="example-spacer"></span>
+
+    <a style="margin-right: 100px; size: 15px;" class="nav-link" routerLink="/login" routerLinkActive="active"  mat-icon-button class="nav-link" *ngIf="loggedIn" (click) ="logoutUser()">Logout 
+      
+    </a>
+    
+
+    <p id="username-text" *ngIf="loggedIn">Pankaj Bhargava</p>
+    &nbsp;
+    <p id="datetime-text"></p>  <script>document.write(new Date().getFullYear());</script>    
+  </mat-toolbar>
+</p> -->

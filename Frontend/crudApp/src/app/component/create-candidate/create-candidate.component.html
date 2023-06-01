@@ -1,0 +1,139 @@
+<h3><b>Candidate Details</b></h3>
+<hr style="color: black;">
+
+
+
+<form  (ngSubmit)="OnSubmit()">
+
+  <div class="firstContainer" style="margin-bottom: 10px;">
+    <div style="width: 50%; float:left; align-items: center; ">
+      <label class="lbl" style="margin-right: 20px;">Candidate ID</label>
+      <input type="text" id="cid" [(ngModel)]="candidate.cid"   name="cid" style="background-color: rgb(217, 215, 215);"
+        readonly />
+    </div>
+
+    <div style="width: 50%; float: right; align-items: center; ">
+      <label class="lbl" style="margin-right: 20px;">Candidate Name</label><input type="text" id="cname"
+        [(ngModel)]="candidate.cname" style="background-color: rgb(217, 215, 215);"  name="cname" readonly />
+    </div>
+
+   
+  </div>
+
+
+
+  <h3><b>Interview Feedback</b></h3>
+
+  <hr style="color: black;">
+  <div class="secondContainer" style="padding-top: 20px;">
+    <div style="width: 50%; float:left; align-items: center;">
+      <label class="lbl" style="margin-right: 20px;">Interview Type</label>
+      <label style="margin-right: 10px;">
+        <input type="radio" value="technical"  [(ngModel)]="candidate.itype" name="itype" required> Technical
+      </label>
+      <label>
+        <input type="radio" value="hr" [(ngModel)]="candidate.itype" name="itype" required> HR
+      </label>
+    </div>
+
+    <div style="width: 50%; float:right; align-items: center;">
+      <label class="lbl" style="margin-right: 20px;">Interveiwer Name</label>
+      <input type="text" id="iname" [(ngModel)]="candidate.iname"  name="iname" required />
+    </div>
+  </div>
+  <br>
+
+  <div class="thirdcontainer" style="padding-top: 20px;">
+    <div style="width: 50%; float:left; align-items: center;">
+      <label class="lbl" style="margin-right: 20px;">Interview Mode</label>
+      <label style="margin-right: 30px;">
+        <input type="radio" value="offline" [(ngModel)]="candidate.imode"  name="imode" required> Offline
+      </label>
+      <label>
+        <input type="radio" value="online" [(ngModel)]="candidate.imode" name="imode"  required> Virtual
+      </label>
+    </div>
+    <div style="width: 50%; float:right; align-items: center;">
+      <label class="lbl" style="margin-right: 20px;">Interview Date</label> <input type="date" id="idate"
+        [(ngModel)]="candidate.idate"  name="idate" required/>
+    </div>
+  </div>
+  <hr style="color: black;">                             
+  <h3 style="margin-top: auto;"><b>Interview Feedback</b></h3>
+
+  <hr style="color: black;">
+
+
+  <div class="fourthContainer">
+    <table style="margin-top: 20px; width: 40%; height: 100px;">
+      <tr style="margin-bottom: 10px;">
+        <th>Skills</th>
+        <th>A+</th>
+        <th>A</th>
+        <th>B+</th>
+        <th>B</th>
+        <th>C</th>
+      </tr>                              
+
+
+      <tr style="margin-top: 40px;">
+        <td><b>Problem Solving</b></td>
+        <td><input type="radio" value="5" [(ngModel)]="technical.problem_solving" name="problem_solving" required ></td>
+        <td><input type="radio" value="4" [(ngModel)]="technical.problem_solving" name="problem_solving" required></td>
+        <td><input type="radio" value="3" [(ngModel)]="technical.problem_solving" name="problem_solving" required></td>
+        <td><input type="radio" value="2" [(ngModel)]="technical.problem_solving" name="problem_solving" required></td>
+        <td><input type="radio" value="1" [(ngModel)]="technical.problem_solving" name="problem_solving" required></td>
+      </tr>
+
+      <tr style="margin-top: 50px;">
+        <td><b>Adaptability</b></td>
+        <td><input type="radio" value="5" [(ngModel)]="technical.adaptability" name="adaptability" required ></td>
+        <td><input type="radio" value="4" [(ngModel)]="technical.adaptability" name="adaptability" required></td>
+        <td><input type="radio" value="3" [(ngModel)]="technical.adaptability" name="adaptability" required></td>
+        <td><input type="radio" value="2" [(ngModel)]="technical.adaptability" name="adaptability" required></td>
+        <td><input type="radio" value="1" [(ngModel)]="technical.adaptability" name="adaptability" required></td>
+      </tr>
+
+      <tr style="margin-top: 50px;">
+        <td><b>Team Work</b></td>
+        <td><input type="radio" value="5" [(ngModel)]="technical.team_work" name="team_work" required></td>
+        <td><input type="radio" value="4" [(ngModel)]="technical.team_work" name="team_work" required></td>
+        <td><input type="radio" value="3" [(ngModel)]="technical.team_work" name="team_work" required></td>
+        <td><input type="radio" value="2" [(ngModel)]="technical.team_work" name="team_work" required></td>
+        <td><input type="radio" value="1" [(ngModel)]="technical.team_work" name="team_work" required></td>
+      </tr>
+    </table>
+
+  </div>
+
+  <hr style="color: black;">
+
+  <div class="fifthContainer" style=" display: flex; justify-content: space-between;">
+    <div class="form-group" style=" margin-left: 0;">
+      <button mat-raised-button
+        style="background-color : black; border : 2px solid rgb(234, 234, 244); color: white; border-radius: 4px;"
+        type="submit" class="btn btnclass btn-success">Submit</button>
+    </div>
+
+    <div class="form-group" style=" margin-right: 0; display:block;">
+      <button mat-raised-button
+        style="background-color : black; border : 2px solid rgb(234, 234, 244); color : white; border-radius: 4px;"
+         type="reset" class="btn btnclass btn-success" (click)="onreset()" >Reset</button>
+    </div>
+
+  </div>
+
+<hr style="color: black;">
+
+  <label style="margin-right: 10px; margin-top:  auto;"><b>Final Rating</b> </label>
+  <hr style="color: black;">
+
+  <div class="sixthContainer" style="width: 50%; align-items: center;">
+    <label class="lbl" style="margin-right: 20px;">Final Rating</label>
+    <input type="text" id="final_rating" value={{technical.final_rating}} name="final_rating" />
+ </div>
+  <hr style="color: black;">
+</form>
+
+
+

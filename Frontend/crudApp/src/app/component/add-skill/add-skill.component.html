@@ -1,0 +1,111 @@
+<p>Add New Skill</p>
+<mat-divider></mat-divider>
+<!-- <br /> -->
+<form (ngSubmit)="addNewSkillCall()" method="post">
+    <div class="row1">
+        <!-- <div class="textbox" >Skill Name</div> -->
+        <div layout="row" layout-wrap="">
+            <div style="width: 50%; float:left; align-items: center; ">
+                <label class="textbox">Skill Name</label>
+                <input matInput placeholder="Enter Skill Name" value="" name="skillName"
+                    [(ngModel)]="dataofskill.skillName">
+            </div>
+            <div style="width: 50%; float:right; align-items: center;">
+                <label class="textbox">Skill Category</label>
+
+                <mat-form-field style="margin-top: 10px;">
+                    <!-- Notice the "#regimeWidget"! -->
+                    <mat-select (valueChange)="changeValue($event)" [(ngModel)]="skillCategoryDropdown" name="regime-input" #regimeWidget>
+                        <mat-option *ngFor="let skill of skillCategories1" [value]="skill" style="height: 20px;">
+                            {{skill}}
+                        </mat-option>
+                        <mat-option value="Other">Other</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                &nbsp;
+                
+                <ng-container *ngIf="isOtherSelected">
+                    <input matInput placeholder="Enter Skill Category" value="" name="skillCategory"
+                    [(ngModel)]="dataofskill.skillCategory">
+                </ng-container>
+                
+            </div>
+        </div>
+        <br />
+        <br/>
+
+        <p>Skill Ratings Required</p>
+        <mat-divider></mat-divider>
+        <!-- <br /> -->
+        <div layout="row" layout-wrap="">
+            <div style="width: 50%; float:left; align-items: center; ">
+                <label class="textbox">E7</label>
+                <input matInput placeholder="" value="" name="required_E7" [(ngModel)]="dataofskill.required_E7">
+            </div>
+            <div style="width: 50%; float:right; align-items: center;">
+                <label class="textbox">E6</label>
+                <input matInput placeholder="" value="" name="required_E6" [(ngModel)]="dataofskill.required_E6">
+            </div>
+        </div>
+        <br />
+        <br />
+        <div layout="row" layout-wrap="">
+            <div style="width: 50%; float:left; align-items: center; ">
+                <label class="textbox">E5</label>
+                <input matInput placeholder="" value="" name="required_E5" [(ngModel)]="dataofskill.required_E5">
+            </div>
+            <div style="width: 50%; float:right; align-items: center;">
+                <label class="textbox">E4</label>
+                <input matInput placeholder="" value="" name="required_E4" [(ngModel)]="dataofskill.required_E4">
+            </div>
+        </div>
+        <br />
+        <br />
+        <div layout="row" layout-wrap="">
+            <div style="width: 50%; float:left; align-items: center; ">
+                <label class="textbox">E3</label>
+                <input matInput placeholder="" value="" name="required_E3" [(ngModel)]="dataofskill.required_E3">
+            </div>
+            <div style="width: 50%; float:right; align-items: center;">
+                <label class="textbox">E2</label>
+                <input matInput placeholder="" value="" name="required_E2" [(ngModel)]="dataofskill.required_E2">
+            </div>
+        </div>
+        <br />
+        <br />
+        <div layout="row" layout-wrap="">
+            <div style="width: 50%; float:left; align-items: center; ">
+                <label class="textbox">E1A</label>
+                <input matInput placeholder="" value="sunny" name="required_E1A" [(ngModel)]="dataofskill.required_E1A">
+            </div>
+            <div style="width: 50%; float:right; align-items: center;">
+                <label class="textbox">E1</label>
+                <input matInput placeholder="" value="sunny" name="required_E1" [(ngModel)]="dataofskill.required_E1">
+            </div>
+        </div>
+        <br />
+        <br />
+        <div layout="row" layout-wrap="">
+            <div style="width: 50%; float:left; align-items: center; ">
+                <label class="textbox">E0</label>
+                <input matInput placeholder="" value="sunny" name="required_E0" [(ngModel)]="dataofskill.required_E0">
+            </div>
+            <div style="width: 50%; float:right;">
+                <label class="textbox">C</label>
+                <input matInput placeholder="" value="sunny" name="required_C" [(ngModel)]="dataofskill.required_C">
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <footer>
+            <div layout="row" layout-wrap="">
+                <input type="submit" mat-raised-button color="primary" class="textbox" value="Submit" />
+                <div style="width: 50%; float:right; align-items: right;">
+                    <button mat-raised-button color="primary" class="btnlgn" (click)="resetValues()"
+                        style="float:right;">Reset</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</form>

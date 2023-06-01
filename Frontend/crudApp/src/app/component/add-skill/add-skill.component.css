@@ -1,0 +1,29 @@
+.textbox{
+    /* height: 40px; */
+    width: 200px;
+    background-color: rgb(61, 43, 226);
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+    display:inline-block;
+    /* text-decoration-color: white; */
+}
+
+/* .example-spacer {
+    flex: 1;
+  } */
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .row > div:not(.flex) {
+    background: #676EE0;
+  }
+  .flex {
+    flex: 1;
+    background: #67E079;
+  }

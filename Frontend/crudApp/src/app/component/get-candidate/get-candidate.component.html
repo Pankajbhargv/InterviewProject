@@ -1,0 +1,32 @@
+<div  class="imgcontainer" *ngIf="flag">
+    <img  class="img-fluid " style="width: 100px;" src="/assets/upload.png" alt="Please Login!"><br>    
+
+</div>
+
+
+<div class="filecontainer" *ngIf="flag">
+    <input type="file" (change)="selectFile($event)"/>
+    <button class="btn" (click)="uploadFile()" mat-raised-button>Upload File</button>
+</div>
+<hr style="color: black;">
+
+<div class="sixthContainer" style=" display: flex; justify-content: space-between; margin-top: 50px;" *ngIf="flag">
+    <div class="form-group" style="margin-bottom: 60px; margin-left: 0;">
+      <button mat-raised-button style="background-color : black; border : 2px solid rgb(234, 234, 244); color: white; border-radius: 4px;" type="submit" class="btn btnclass btn-success">Submit</button>
+      </div>
+  
+      <div class="form-group" style="margin-bottom: 60px; margin-right: 0; display:block;">
+        <button mat-raised-button style="background-color : black; border : 2px solid rgb(234, 234, 244); color : white; border-radius: 4px;" type="reset" class="btn btnclass btn-success">Reset</button>
+        </div>
+        
+      
+  </div>
+  
+  <div class="loader" *ngIf="!flag">
+   
+    <div class="spinner-container">
+        <div class="spinner"></div>
+        <div class="spinner-text">Uploading...</div>
+      </div>
+      
+  </div>

@@ -1,0 +1,55 @@
+<div class="animated-background"></div>
+<div class="bootstrap wrapper" class="body">
+
+    
+
+
+<div class="container textcenter"  id="bimage">
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <div class="container textcenter mt">
+
+                <img class="img-fluid " style="width: 100px;" src="/assets/loginlogo.png" alt="Please Login!">
+
+            </div>
+            <h2 class="textcenter">Login Here</h2>
+
+            <!--Creating the Login Form-->
+            <form (ngSubmit)="onSubmit()">
+                <mat-form-field class="full-width">
+                    <mat-label>Username</mat-label>
+                    <input name="username" type="text" [(ngModel)]="credentials.username" required matInput/>
+                </mat-form-field>
+
+
+
+                <mat-form-field class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input name="password" type="password" [(ngModel)]="credentials.password" required matInput/>
+                </mat-form-field>
+
+                
+                
+
+                <div class="container textcenter">
+                    <button mat-raised-button type="submit" [ngStyle]="{'background-color': '#000000', 'color': '#ffffff'}">Login</button>
+                    <button style="margin-left: 10px;" mat-raised-button type="reset" [ngStyle]="{'background-color': '#000000', 'color': '#ffffff'}">Reset</button>
+
+                    <!-- <button type="submit" mat-raised-button color="red">Login</button>
+                    <button style="margin-left: 10px;" type="reset" mat-raised-button color="red">Reset</button> -->
+                </div>
+
+                <!-- {{credentials | json}} -->
+               
+
+                
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
